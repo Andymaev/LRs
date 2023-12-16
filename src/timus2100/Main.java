@@ -6,7 +6,7 @@ import java.io.BufferedReader;
 public class Main {
     public static void main(String[] args) {
         String inputFileName = "src/timus2100/input.txt";
-        boolean oj = System.getProperties("ONLINE_JUDGE") != null;
+        boolean oj = System.getProperty("ONLINE_JUDGE") != null;
         int marshallAndLilly = 2;
 
         try{
@@ -17,8 +17,8 @@ public class Main {
             int numberOfFriends = 0;
             int numberOfPairs = 0;
             while ((readLine = br.readLine()) != null){
-                if(numberOfFriends ==0){
-                    numberOfPairs = Integer.parseInt(readLine);
+                if(numberOfFriends == 0){
+                    numberOfFriends = Integer.parseInt(readLine);
                     continue;
                 }
                 if(readLine.contains("+")){
